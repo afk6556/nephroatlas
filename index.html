@@ -1224,8 +1224,8 @@ function save(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)); }catch(e){} 
 function defDB(){ return {v:4, visitors:{}, results:[], events:[], gifts:[], settings:{
   pw: hash(dsc(DPW)), min:13,
   gTitle:"Поздравляю! Ты заслужил подарок",
-  gText:"Ты ответил верно на 13 и более вопросов из 15. Промокод на подписку Яндекс Плюса сроком до 45 дней.",
-  syncUrl:"", 43YR5X5ASU:""}}; }
+  gText:"Ты ответил верно на 13 и более вопросов из 15. Покажи мне этот код — я выдам приз.",
+  syncUrl:"", syncKey:""}}; }
 var DB=load(DBK,null);
 if(!DB || DB.v!==4 || !DB.settings){ DB=defDB(); save(DBK,DB); }
 var CID=load(CIDK,null); if(!CID){ CID=uid("c"); save(CIDK,CID); }
